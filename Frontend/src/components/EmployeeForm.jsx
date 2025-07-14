@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
 import { CiCircleRemove } from "react-icons/ci";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../context/allContext";
 
 const EmployeeForm = () => {
   const { addEmployee, setShowAddEmployee,formData,setFormData,edit,editEmployee } = useGlobalContext();
@@ -22,7 +22,7 @@ const EmployeeForm = () => {
     console.log(e.target);
     if(edit){
         // console.log("edit form")
-        editEmployee(edit.id)
+        editEmployee(edit._id)
     }else{
         addEmployee(formData);
     }
@@ -76,7 +76,7 @@ const EmployeeForm = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-blue-600 p-3 text-white w-[40%] text-lg font-semibold rounded"
+                className="bg-orange-600 p-3 text-white w-[40%] text-lg font-semibold rounded"
               >
                 Submit
               </button>

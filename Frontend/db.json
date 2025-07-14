@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "name": "Rohit",
+      "email": "rohit@gmail.com",
+      "position": "Frontend",
+      "salary": "49000",
+      "id": "1"
+    },
+    {
+      "id": "b6fd",
+      "name": "Praveen Verma",
+      "email": "aman@gmail.c",
+      "position": "developer",
+      "salary": "550000"
+    }
+  ]
+}

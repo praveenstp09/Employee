@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { IoMdRemoveCircle } from "react-icons/io";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../context/allContext";
 
 const EmployeeTable = () => {
   const {
     employees,
     setShowAddEmployee,
     deleteEmployee,
-    editEmployee,
     setFormData,
     setEdit
   } = useGlobalContext();
@@ -37,7 +35,7 @@ const EmployeeTable = () => {
           <tbody>
             {employees.map((emp) => {
               return (
-                <tr className="border-b" key={emp.id}>
+                <tr className="border-b" key={emp._id}>
                   <td className="px-4 py-2 font-semibold">{emp.name}</td>
                   <td className="px-4 py-2">{emp.email}</td>
                   <td className="px-4 py-2">{emp.position}</td>
@@ -49,7 +47,7 @@ const EmployeeTable = () => {
                       </button>
                       <button
                         onClick={() => {
-                          deleteEmployee(emp.id);
+                          deleteEmployee(emp._id);
                         }}
                       >
                         <IoMdRemoveCircle fontSize={23} />
